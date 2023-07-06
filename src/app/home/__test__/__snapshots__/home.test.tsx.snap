@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders a No Title Props 1`] = `
+<div>
+  <div>
+    <input
+      placeholder="Enter your home title"
+      type="text"
+    />
+    Please, Enter title contents.
+  </div>
+</div>
+`;
+
+exports[`Home renders a Title Props 1`] = `
+<div>
+  <div>
+    <input
+      placeholder="Enter your home title"
+      type="text"
+    />
+    Test Title1
+  </div>
+</div>
+`;

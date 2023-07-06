@@ -1,10 +1,17 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { Title } from '@/components'
 
-export default async function Home() {
+interface Props {
+    title?: string
+}
+
+export default function Home(props: Props) {
+    const { title } = props
+
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-            <Title />
+            <Title title={title} />
         </div>
     )
 }
