@@ -1,32 +1,23 @@
+'use client'
+
 import { Header } from '@/components'
 import { Sidebar } from '@/components/Sidebar'
-import styles from '../app/page.module.css'
 import React from 'react'
+import useStyles from './resource'
 
 interface Props {
     children: React.ReactNode
 }
 
 export function MainLayout({ children }: Props) {
+    const { container, contents, sidebar, main } = useStyles()
+
     return (
-        <section
-            style={{
-                height: '100vh',
-                position: 'relative',
-                display: 'flex',
-                flexDirection: 'column'
-            }}
-        >
+        <section style={container}>
             <Header />
-            <div
-                style={{
-                    position: 'relative',
-                    display: 'flex',
-                    flex: 1
-                }}
-            >
-                <Sidebar style={{ width: '250px', flex: 'none' }} />
-                <div style={{ flex: 1, padding: '2rem' }}>{children}</div>
+            <div style={contents}>
+                <Sidebar style={sidebar} />
+                <div style={main}>{children}</div>
             </div>
         </section>
     )
