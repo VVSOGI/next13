@@ -2,24 +2,30 @@
 
 exports[`Home renders a No Title Props 1`] = `
 <div>
-  <div>
+  <div
+    style="display: flex; flex-direction: column;"
+  >
+    Test Title1
     <input
       placeholder="Enter your home title"
+      style="width: 400px; padding: 1rem; margin-top: 1rem;"
       type="text"
     />
-    Please, Enter title contents.
   </div>
 </div>
 `;
 
 exports[`Home renders a Title Props 1`] = `
 <div>
-  <div>
+  <div
+    style="display: flex; flex-direction: column;"
+  >
+    Test Title2
     <input
       placeholder="Enter your home title"
+      style="width: 400px; padding: 1rem; margin-top: 1rem;"
       type="text"
     />
-    Test Title1
   </div>
 </div>
 `;

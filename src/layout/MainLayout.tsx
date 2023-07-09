@@ -9,7 +9,14 @@ interface Props {
 
 export function MainLayout({ children }: Props) {
     return (
-        <section className={styles.main}>
+        <section
+            style={{
+                height: '100vh',
+                position: 'relative',
+                display: 'flex',
+                flexDirection: 'column'
+            }}
+        >
             <Header />
             <div
                 style={{
@@ -19,7 +26,7 @@ export function MainLayout({ children }: Props) {
                 }}
             >
                 <Sidebar style={{ width: '250px', flex: 'none' }} />
-                <div style={{ flex: 1 }}>{children}</div>
+                <div style={{ flex: 1, padding: '2rem' }}>{children}</div>
             </div>
         </section>
     )
