@@ -1,10 +1,15 @@
+'use client'
 import { useEffect, useState } from 'react'
 import { schemes } from '.'
 
 type Theme = 'dark' | 'light'
 
 function getStoredTheme(): Theme {
-    return (localStorage.getItem('theme') as Theme) || 'light'
+    if (typeof window !== 'undefined') {
+        return (localStorage.getItem('theme') as Theme) || 'light'
+    } else {
+        return 'light'
+    }
 }
 
 export function useColors() {
