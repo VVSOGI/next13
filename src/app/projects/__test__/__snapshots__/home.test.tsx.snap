@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects if projects is empty 1`] = `
+<div>
+  <section
+    style="display: flex; align-items: center; background-color: rgb(255, 255, 255); color: rgb(2, 7, 37);"
+  />
+</div>
+`;
+
+exports[`Projects renders projects 1`] = `
+<div>
+  <section
+    style="display: flex; align-items: center; background-color: rgb(255, 255, 255); color: rgb(2, 7, 37);"
+  >
+    <div>
+      Project 1
+    </div>
+    <div>
+      Project 2
+    </div>
+  </section>
+</div>
+`;
