@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Projects if projects api is error 1`] = `
+<div>
+  <div>
+    <h2>
+      Something went wrong!
+    </h2>
+    <button>
+      Try again
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Projects if projects is empty 1`] = `
 <div>
   <section
