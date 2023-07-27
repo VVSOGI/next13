@@ -1,13 +1,10 @@
 import React, { Suspense } from 'react'
-import Page from './page'
 import { MainLayout } from '@/layout'
 
-export default function layout() {
+export default function layout({ children }: any) {
     return (
         <MainLayout>
-            <Suspense fallback={<div>...</div>}>
-                <Page />
-            </Suspense>
+            <Suspense fallback={<div>...</div>}>{children}</Suspense>
         </MainLayout>
     )
 }

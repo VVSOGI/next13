@@ -1,10 +1,14 @@
 'use client'
 import React from 'react'
 
-export function Error() {
+interface Props {
+    message: string
+}
+
+export function Error({ message }: Props) {
     return (
         <div>
-            <h2>Something went wrong!</h2>
+            <h2>{message}</h2>
             <button>Try again</button>
         </div>
     )

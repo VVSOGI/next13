@@ -10,7 +10,7 @@ describe('Projects', () => {
         const projects = await customFetch()
 
         if (projects instanceof Error) {
-            return render(<ErrorComponents />)
+            return render(<ErrorComponents message={projects.message} />)
         }
 
         return render(<ProjectsContainer projects={projects} />)
@@ -38,5 +38,6 @@ describe('Projects', () => {
 
         const { container } = await renderProjects(mockProjects)
         expect(container).toMatchSnapshot()
+        expect(container).toHaveTextContent('API is error')
     })
 })

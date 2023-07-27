@@ -4,7 +4,7 @@ exports[`Projects if projects api is error 1`] = `
 <div>
   <div>
     <h2>
-      Something went wrong!
+      API is error
     </h2>
     <button>
       Try again

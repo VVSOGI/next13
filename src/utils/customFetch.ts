@@ -8,6 +8,6 @@ export async function customFetch<T>(url: string, options?: RequestInit): Promis
         return data
     } else {
         const error = await response.json()
-        throw new Error(`${error.message} ${error.statusCode}`)
+        throw error
     }
 }

@@ -10,7 +10,7 @@ export default function useStyles() {
     const styles: Styles = {
         container: {
             display: 'flex',
-            alignItems: 'center',
+            flexDirection: 'column',
             backgroundColor: C.background,
             color: C.elements1
         }
