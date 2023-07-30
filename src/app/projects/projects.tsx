@@ -2,23 +2,24 @@
 
 import { Project } from '@/types/project'
 import React from 'react'
-import useStyles from './resource'
+import { Button, Contents, Title } from './resource'
+import { useRouter } from 'next/navigation'
 
 interface Props {
     projects: Project[]
 }
 
 export default function Projects({ projects }: Props) {
-    const { container, title } = useStyles()
+    const router = useRouter()
 
     return (
         <div>
             {projects.map((project) => {
                 return (
-                    <div key={project.id} style={{ ...container }}>
-                        <span style={{ ...title }}>{project.title}</span>
-                        <button>이동</button>
-                    </div>
+                    <Contents key={project.id}>
+                        <Title>{project.title}</Title>
+                        <Button onClick={() => router.push(`/projects/${project.id}`)}>이동</Button>
+                    </Contents>
                 )
             })}
         </div>

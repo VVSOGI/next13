@@ -1,20 +1,27 @@
-import React from 'react'
+import styled from '@emotion/styled'
 
-type keys = 'container' | 'title' | 'button'
-type Styles = Record<keys, React.CSSProperties>
+const Contents = styled.div`
+    display: flex;
+    margin-bottom: 18px;
+    align-items: center;
+`
 
-export default function useStyles() {
-    const styles: Styles = {
-        container: {
-            display: 'flex',
-            marginBottom: '18px'
-        },
-        title: {
-            fontSize: 20,
-            marginRight: '5px'
-        },
-        button: {}
+const Title = styled.h1`
+    margin-right: 10px;
+`
+
+const Button = styled.button`
+    padding: 5px 20px;
+    background-color: #fff;
+    outline: none;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 2px;
+
+    :hover {
+        background-color: #000;
+        color: #fff;
     }
+`
 
-    return styles
-}
+export { Contents, Title, Button }
