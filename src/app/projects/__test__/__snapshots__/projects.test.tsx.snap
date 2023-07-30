@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects Should return error when fetch failed projects: error 1`] = `
+<div>
+  <div>
+    <p>
+      500
+    </p>
+    <p>
+      The server could not be reached. Please check your network connection.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Projects should render projects: render projects 1`] = `
+<div>
+  <div>
+    <div
+      class="css-i78qt7"
+    >
+      <h1
+        class="css-1lta3h2"
+      >
+        title
+      </h1>
+      <button
+        class="css-1o3n102"
+      >
+        이동
+      </button>
+    </div>
+  </div>
+</div>
+`;

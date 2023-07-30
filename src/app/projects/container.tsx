@@ -9,7 +9,7 @@ interface Props {
     projects: Project[]
 }
 
-export default function Projects({ projects }: Props) {
+export default function Container({ projects }: Props) {
     const router = useRouter()
 
     return (

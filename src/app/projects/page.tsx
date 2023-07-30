@@ -1,5 +1,5 @@
 import React from 'react'
-import Projects from './projects'
+import Container from './container'
 import { fetchData } from '@/utils/fetchData'
 import { Project } from '@/types/project'
 
@@ -8,5 +8,5 @@ export default async function Page() {
         cache: 'no-store'
     })
 
-    return <Projects projects={projects} />
+    return <Container projects={projects} />
 }

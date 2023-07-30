@@ -7,7 +7,13 @@ export async function fetchData<T>(url: string, init?: RequestInit): Promise<T> 
             throw new Error(cause)
         }
 
-        return response.json()
+        const text = await response.text() // 응답을 텍스트로 받아옵니다.
+
+        if (!text) {
+            return null as T
+        }
+
+        return JSON.parse(text) as T
     } catch (error: any) {
         if (error.message === 'fetch failed') {
             const networkError = JSON.stringify({
