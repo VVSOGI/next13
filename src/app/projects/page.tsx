@@ -1,12 +1,8 @@
 import React from 'react'
 import Container from './container'
-import { fetchData } from '@/utils/fetchData'
-import { Project } from '@/types/project'
+import { pageData } from './pageData'
 
 export default async function Page() {
-    const projects = await fetchData<Project[]>('http://localhost:4000/projects', {
-        cache: 'no-store'
-    })
-
+    const { projects } = await pageData()
     return <Container projects={projects} />
 }

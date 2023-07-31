@@ -14,5 +14,6 @@ export default async function Page({ params }: Props) {
     const project = await fetchData<Project>(`http://localhost:4000/projects/${id}`, {
         cache: 'no-store'
     })
+
     return <Container project={project} />
 }
